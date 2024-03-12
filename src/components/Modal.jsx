@@ -13,7 +13,7 @@ const Modal = ({ onClose, children, id }) => {
         <button onClick={onClose} className="absolute top-3 right-3 text-xl hover:text-red-500 transition-all duration-200">
           <FaTimes />
         </button>
-        <div className="text-sm text-gray-500 mr-8 mb-3">{id}</div>
+        <div className="text-sm text-left text-gray-500 mr-8 mb-3">{id}</div>
         {children}
       </div>
     </div>

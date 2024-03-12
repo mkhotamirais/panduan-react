@@ -65,6 +65,17 @@ p a {
   animation: comeLeft 1s ease-in-out forwards;
 }
 
+#reduxCrud table {
+  @apply w-full border-separate;
+}
+
+#reduxCrud table th {
+  @apply font-medium py-1 border rounded;
+}
+
+#reduxCrud table td {
+  @apply border rounded text-center;
+}
 /* animation */
 @keyframes toRight {
   0% {

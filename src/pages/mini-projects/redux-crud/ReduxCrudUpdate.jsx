@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { updateProduct } from "../../../app/features/reduxCrud/reduxCrudSlice";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSnackbar } from "notistack";
+import { setSort } from "../../../app/features/reduxCrud/reduxCrudA2Slice";
 
 const ReduxCrudUpdate = () => {
   const { id } = useParams();
@@ -34,6 +35,7 @@ const ReduxCrudUpdate = () => {
       data.updatedAt = new Date().toISOString();
       dispatch(updateProduct(data));
       navigate(-1);
+      dispatch(setSort("updatedAt"));
       enqueueSnackbar("Update data berhasil", { variant: "success" });
     }
   };

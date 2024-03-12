@@ -14,7 +14,7 @@ const ReduxCrudModalDelete = ({ onClose, item }) => {
   };
   return (
     <Modal onClose={onClose} id={item.id}>
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col items-start gap-5">
         <div>Apakah kamu yakin?</div>
         <div className="flex gap-1">
           <Button onClick={() => onDelete(item.id)} className={"bg-red-500 w-auto"}>

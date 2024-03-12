@@ -4,7 +4,7 @@ import TimeAgo from "./TimeAgo";
 const ReduxCrudModalView = ({ onClose, item }) => {
   return (
     <Modal onClose={onClose} id={item.id}>
-      <div>
+      <div className="flex flex-col items-start gap-2">
         <div>Name : {item.name}</div>
         <div>Price : {item.price}</div>
         <div>Desciription : {item.description}</div>

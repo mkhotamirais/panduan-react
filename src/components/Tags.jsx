@@ -69,7 +69,7 @@ export const Button = ({ children = "Button", type = "button", disabled, onClick
     type={type}
     disabled={disabled}
     onClick={onClick}
-    className={`${className} bg-blue-500 w-auto  sm:w-auto px-4 p-2 text-white rounded hover:opacity-50 disabled:opacity-50`}
+    className={`${className} bg-blue-500 w-auto sm:w-auto px-4 p-2 text-white rounded hover:opacity-50 disabled:opacity-50`}
   >
     {children}
   </button>
