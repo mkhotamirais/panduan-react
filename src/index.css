@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.overflow-x-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+p a {
+  @apply text-cyan-500 font-medium hover:underline;
+}
+/* \carousel */
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+.carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s;
+}
+.carousel__btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel__btn--prev {
+  left: 0;
+}
+.carousel__btn--next {
+  right: 0;
+}
+.carousel__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+.carousel__img:hover {
+  transform: scale(1.05);
+}
+
+.toRight {
+  animation: toRight 1s ease-in-out forwards;
+}
+.toLeft {
+  animation: toLeft 1s ease-in-out forwards;
+}
+.comeRight {
+  animation: comeRight 1s ease-in-out forwards;
+}
+.comeLeft {
+  animation: comeLeft 1s ease-in-out forwards;
+}
+
+/* animation */
+@keyframes toRight {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes toLeft {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes comeRight {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes comeLeft {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes squish {
+  50% {
+    scale: 1.4 0.6;
+  }
+}
