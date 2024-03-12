@@ -1,11 +1,7 @@
 import { FaEdit, FaTimes, FaTrash } from "react-icons/fa";
 import { TimeAgo } from "../../../components/Components";
-import { useEffect } from "react";
 
 const ReactCrudList = ({ item, deleteData, editToggle, isEdit, editId, checkedId }) => {
-  useEffect(() => {
-    console.log(isEdit);
-  }, []);
   let content;
   if (item) {
     content = (

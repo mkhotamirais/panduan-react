@@ -62,9 +62,10 @@ const ReactCrud = () => {
   const onEdit = (e) => {
     e.preventDefault();
     const otherData = data.filter((d) => d.id !== editId);
-    const match = data.filter((d) => d.id === editId);
-    match[0].title = titleEdit;
-    const result = [...otherData, ...match];
+    const match = data.find((d) => d.id === editId);
+    match.title = titleEdit;
+    match.updatedAt = new Date().toISOString();
+    const result = [...otherData, match];
     setResult(result);
     setIsEdit(false);
     setMsg(`Update data id ${editId} success`);
