@@ -23,6 +23,7 @@ const ReduxCrud = () => {
 
   useEffect(() => {
     setView(JSON.parse(localStorage.getItem("reduxCrudView")));
+    console.log(data.length);
   }, []);
 
   const onClose = () => {
@@ -30,7 +31,7 @@ const ReduxCrud = () => {
   };
 
   let content;
-  if (data) {
+  if (data?.length > 0) {
     const renderedDataCard = data && sortedData.map((item) => <ReduxCrudCard key={item.id} item={item} />);
     const renderedDataTable = data && sortedData.map((item, i) => <ReduxCrudTable key={item.id} item={item} i={i} />);
     if (view === "card") {
@@ -53,7 +54,7 @@ const ReduxCrud = () => {
         </table>
       );
     }
-  }
+  } else if (data.length == 0) content = <div className="text-center italic mt-5">Data empty</div>;
   return (
     <section id="reduxCrud">
       <div className="flex justify-between">
