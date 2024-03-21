@@ -8,7 +8,7 @@ import Todo1Add from "./Todo1Add";
 //   { id: "1", text: "text2", done: false },
 //   { id: "2", text: "text3", done: false },
 // ];
-const initialTodo = JSON.parse(localStorage.getItem("todo"));
+const initialTodo = JSON.parse(localStorage.getItem("todo")) || [];
 
 const Todo1 = () => {
   const [todos, dispatch] = useReducer(todoReducer, initialTodo);

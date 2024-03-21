@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "../../../../components/Tags";
-// import { enqueueSnackbar } from "notistack";
+import { enqueueSnackbar } from "notistack";
 
 const Todo1Add = ({ onAddTodo }) => {
   const [text, setText] = useState("");
@@ -8,7 +8,7 @@ const Todo1Add = ({ onAddTodo }) => {
     e.preventDefault();
     onAddTodo(text);
     setText("");
-    // enqueueSnackbar(`add ${text} success`, { variant: "success" });
+    enqueueSnackbar(`add ${text} success`, { variant: "success" });
   };
   return (
     <form onSubmit={handleAdd} className="flex">
