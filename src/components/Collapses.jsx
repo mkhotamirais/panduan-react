@@ -22,12 +22,8 @@ export const BtnSidebarCollapse = ({ className }) => {
   const { openSidebar } = useSelector((state) => state.collapse);
   const dispatch = useDispatch();
 
-  const onSidebarClick = () => {
-    dispatch(setOpenSidebar());
-  };
-
   return (
-    <button className={`${className} flex`} onClick={() => onSidebarClick()}>
+    <button className={`${className} flex`} onClick={() => dispatch(setOpenSidebar())}>
       <TbLayoutSidebarRightCollapse
         className={`block sm:hidden text-2xl ${openSidebar ? "rotate-180" : "rotate-0"} transition-all duration-200`}
       />
@@ -174,7 +170,9 @@ export const Sidebar = ({ className }) => {
     } else if (path[1] === "components") {
       dispatch(setSidebarList(["accordion", "pagination", "carousel"]));
     } else if (path[1] === "hooks") {
-      dispatch(setSidebarList(["lifecycleclass", "usestate", "useeffect", "usecallback", "customhook"]));
+      dispatch(
+        setSidebarList(["lifecycleclass", "useState", "useEffect", "useCallback", "customhook", "useContext", "useReducer"])
+      );
     } else if (path[1] === "accessibility") {
       dispatch(setSidebarList([]));
     } else if (path[1] === "mini-projects") {

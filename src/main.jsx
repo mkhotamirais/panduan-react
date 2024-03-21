@@ -30,6 +30,8 @@ import ReduxCrudDetail from "./pages/mini-projects/redux-crud/ReduxCrudDetail.js
 import ReduxCrudUpdate from "./pages/mini-projects/redux-crud/ReduxCrudUpdate.jsx";
 import Welcome from "./pages/Welcome.jsx";
 import HomeTips from "./pages/home/HomeTips.jsx";
+import UseContext from "./pages/hooks/useContext/UseContext.jsx";
+import UseReducer from "./pages/hooks/useReducer/UseReducer.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -55,6 +57,8 @@ const router = createBrowserRouter(
         <Route path="useeffect" element={<UseEffect />} />
         <Route path="customHook" element={<CustomHook />} />
         <Route path="usecallback" element={<UseCallback />} />
+        <Route path="usecontext" element={<UseContext />} />
+        <Route path="usereducer" element={<UseReducer />} />
       </Route>
       <Route path="mini-projects">
         <Route index element={<MiniProjects />} />

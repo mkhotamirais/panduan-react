@@ -18,6 +18,20 @@ const result = [...data, { id: id + 1 }];
           <li>
             <span>halo</span>
           </li>
+          <li>
+            <span>Select spesifik object key</span>
+            <Pre>{`
+const obj = { id: 1, nama: "ahmad", umur: 20 };
+const result = Object.keys(obj)
+  .filter((o) => o !== "nama")
+  .reduce((newObj, key) => {
+    newObj[key] = obj[key];
+    return newObj;
+  }, {});
+console.log(obj);
+console.log(result);
+            `}</Pre>
+          </li>
         </ol>
       </div>
     </div>

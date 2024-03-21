@@ -76,6 +76,7 @@ p a {
 #reduxCrud table td {
   @apply border rounded text-center;
 }
+
 /* animation */
 @keyframes toRight {
   0% {

@@ -23,7 +23,6 @@ const ReduxCrud = () => {
 
   useEffect(() => {
     setView(JSON.parse(localStorage.getItem("reduxCrudView")));
-    console.log(data.length);
   }, []);
 
   const onClose = () => {
@@ -42,9 +41,9 @@ const ReduxCrud = () => {
           <thead>
             <tr>
               <th>No</th>
-              <th>Name</th>
-              <th className="hidden sm:table-cell">Price</th>
-              <th className="hidden md:table-cell">Description</th>
+              <th>Title</th>
+              <th className="hidden sm:table-cell">Author</th>
+              <th className="hidden md:table-cell">Publish Year</th>
               <th className="hidden lg:table-cell">CreatedAt</th>
               <th className="hidden xl:table-cell">UpdatedAt</th>
               <th>Action</th>
