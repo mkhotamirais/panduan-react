@@ -32,6 +32,7 @@ import Welcome from "./pages/Welcome.jsx";
 import HomeTips from "./pages/home/HomeTips.jsx";
 import UseContext from "./pages/hooks/useContext/UseContext.jsx";
 import UseReducer from "./pages/hooks/useReducer/UseReducer.jsx";
+import TodoList from "./pages/mini-projects/todo-list/TodoList.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -69,6 +70,7 @@ const router = createBrowserRouter(
           <Route path="detail/:id" element={<ReduxCrudDetail />} />
           <Route path="update/:id" element={<ReduxCrudUpdate />} />
         </Route>
+        <Route path="todo-list" element={<TodoList />} />
       </Route>
       <Route path="accessibility">
         <Route index element={<Accessibility />} />

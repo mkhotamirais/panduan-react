@@ -64,6 +64,7 @@ const ReduxCrud = () => {
         {showModalPr && <ModalPr onClose={onClose} />}
       </div>
       <Breadcrumb />
+      <div>project ini dibuat dengan react dan redux untuk management state nya</div>
       <div className="flex justify-between">
         <PostBtn />
         <div className="flex gap-1 items-center">

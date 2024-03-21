@@ -113,6 +113,7 @@ const ReactCrud = () => {
     <div>
       <H1>react crud</H1>
       <Breadcrumb />
+      <div>project ini dibuat dengan react native</div>
       <ReactCrudCreateOrUpdate
         submitData={submitData}
         title={title}
@@ -125,7 +126,6 @@ const ReactCrud = () => {
         titleEdit={titleEdit}
       />
       {msg && <p className="text-center italic mb-2">{msg}</p>}
-
       {data.length > 0 && (
         <div className="flex justify-between items-center mb-2">
           <div className="flex gap-2 items-center my-2 mb-3 text-sm">

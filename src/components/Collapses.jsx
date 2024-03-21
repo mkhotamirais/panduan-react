@@ -176,7 +176,7 @@ export const Sidebar = ({ className }) => {
     } else if (path[1] === "accessibility") {
       dispatch(setSidebarList([]));
     } else if (path[1] === "mini-projects") {
-      dispatch(setSidebarList(["react crud", "redux crud"]));
+      dispatch(setSidebarList(["react crud", "redux crud", "todo list"]));
     } else dispatch(setSidebarList([]));
   }, [dispatch, path]);
 
