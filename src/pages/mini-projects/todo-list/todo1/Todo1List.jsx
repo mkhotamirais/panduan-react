@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { enqueueSnackbar } from "notistack";
+// import { enqueueSnackbar } from "notistack";
 const Todo1List = ({ todos, onChangeTodo, onDeleteTodo }) => {
   let content;
   if (todos?.length > 0) {
@@ -25,14 +25,14 @@ const Todo = ({ todo, onChangeTodo, onDeleteTodo }) => {
   const handleSaveText = () => {
     onChangeTodo({ ...todo, text });
     setIsEditing(false);
-    enqueueSnackbar(`update ${todo.text} success`, { variant: "success" });
+    // enqueueSnackbar(`update ${todo.text} success`, { variant: "success" });
   };
   const handleChangeDone = (e) => {
     onChangeTodo({ ...todo, done: e.target.checked });
   };
   const handleDelete = () => {
     onDeleteTodo(todo.id);
-    enqueueSnackbar(`delete ${todo.text} success`, { variant: "success" });
+    // enqueueSnackbar(`delete ${todo.text} success`, { variant: "success" });
   };
   const handleCancel = () => {
     setIsEditing(false);
