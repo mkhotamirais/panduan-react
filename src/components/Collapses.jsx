@@ -171,7 +171,16 @@ export const Sidebar = ({ className }) => {
       dispatch(setSidebarList(["accordion", "pagination", "carousel"]));
     } else if (path[1] === "hooks") {
       dispatch(
-        setSidebarList(["lifecycleclass", "useState", "useEffect", "useCallback", "customhook", "useContext", "useReducer"])
+        setSidebarList([
+          "lifecycleclass",
+          "useState",
+          "useEffect",
+          "useCallback",
+          "useMemo",
+          "customhook",
+          "useContext",
+          "useReducer",
+        ])
       );
     } else if (path[1] === "accessibility") {
       dispatch(setSidebarList([]));

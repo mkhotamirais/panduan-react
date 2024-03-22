@@ -1,6 +1,6 @@
 import { Breadcrumb, H1 } from "../../../components/Components";
-import { Par } from "../../../components/Tags";
-import Callback1 from "./Callback1";
+import { Par, Pre } from "../../../components/Tags";
+import { Cb1 } from "./UseCallbackBasic";
 
 export const UseCallback = () => {
   return (
@@ -14,7 +14,18 @@ export const UseCallback = () => {
         mirip useEffect namun nilai dependensi di sini yang digunakan untuk menentukan apakah nilai identity dirubah atau
         tidak.
       </Par>
-      <Callback1 />
+      <Pre>{`
+refferential equality:
+7 === 7               true
+"ahmad" === "ahmad"   true
+[] === []             false
+function ff(){return () => {}}  false
+const a1 = ff()
+const a2 = ff()
+a1 === a2     false
+
+      `}</Pre>
+      <Cb1 />
     </div>
   );
 };

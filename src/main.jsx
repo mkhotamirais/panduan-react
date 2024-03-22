@@ -33,6 +33,7 @@ import HomeTips from "./pages/home/HomeTips.jsx";
 import UseContext from "./pages/hooks/useContext/UseContext.jsx";
 import UseReducer from "./pages/hooks/useReducer/UseReducer.jsx";
 import TodoList from "./pages/mini-projects/todo-list/TodoList.jsx";
+import UseMemo from "./pages/hooks/useMemo/UseMemo.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -60,6 +61,7 @@ const router = createBrowserRouter(
         <Route path="usecallback" element={<UseCallback />} />
         <Route path="usecontext" element={<UseContext />} />
         <Route path="usereducer" element={<UseReducer />} />
+        <Route path="usememo" element={<UseMemo />} />
       </Route>
       <Route path="mini-projects">
         <Route index element={<MiniProjects />} />
