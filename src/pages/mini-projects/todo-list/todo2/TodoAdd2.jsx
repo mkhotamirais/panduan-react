@@ -16,7 +16,9 @@ const TodoAdd2 = () => {
     <div>
       <form onSubmit={handleSubmit} className="flex">
         <input type="text" value={text} onChange={(e) => setText(e.target.value)} className="w-full border rounde p-2" />
-        <Button className="max-w-max">add</Button>
+        <Button type="submit" className="max-w-max">
+          add todo
+        </Button>
       </form>
     </div>
   );
